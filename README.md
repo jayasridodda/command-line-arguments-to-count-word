@@ -6,20 +6,36 @@ PC
 Anaconda - Python 3.7
 ## ALGORITHM: 
 ### Step 1:
-
+Import sys module to use command line arguments.
 ### Step 2: 
- 
+Use the open() by getting the file name with "sys.argv[1]" which means the first index of given argument
 ### Step 3: 
-
+Iterate the content of the file using for loop.
 ### Step 4:  
-
+Split the contents into each line using .split() function.
 ### Step 5: 
-
+Iterate the list of lines and increment the value of variable (word) each time.
 ### Step 6: 
-
+Run the program by giving "python prgm.py EX12.txt" on the terminal.
 ## PROGRAM:
-
+```
+#Developed By: JAYASRI DODDA
+#Register No: 212222240028
+import sys
+count = {}
+with open(sys.argv[1], 'r') as f:
+    for line in f:
+        for word in line.split():
+            if word not in count:
+                count[word] = 1
+            else:
+                count[word] += 1
+print(count)
+f.close()
+```
 ### OUTPUT:
+
+![Screenshot (45)_LI](https://github.com/jayasridodda/command-line-arguments-to-count-word/assets/123259278/aed4dfb5-e237-4590-b2da-867633f19d13)
 
 
 
